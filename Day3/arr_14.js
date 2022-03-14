@@ -38,12 +38,12 @@
 function solution(arr, divisor){
     let answer=[];
 
-    for(let i = 0; i < arr.length; i++){ //arr 길이만큼 한번씩 돌려봄
-        if(arr[i] % divisor === 0){ // arr[i]번째의 숫자가 divisor의 숫자로 나눠서 나머지가 0이면
-            answer.push(arr[i])     // answer에 arr[i]번쨰 값을 푸쉬해서 넣음
+    for(let i = 0; i < arr.length; i++){        //arr 길이만큼 한번씩 돌려봄
+        if(arr[i] % divisor === 0){             // arr[i]번째의 숫자가 divisor의 숫자로 나눠서 나머지가 0이면
+            answer.push(arr[i])                 // answer에 arr[i]번쨰 값을 푸쉬해서 넣음
         }
     }
-    if(answer.length === 0){  //answer의 길이가 0일경우 -1을 출력
+    if(answer.length === 0){                    //answer의 길이가 0일경우 -1을 출력
         answer.push(-1);
     }
     // answer.sort(function(a,b){
@@ -51,8 +51,20 @@ function solution(arr, divisor){
     // })
     // 밑에 코드랑 동일 펑션이 => (화살표)로 변경되고 리턴이 중괄호에서 ()로 변경됨
     answer.sort((a, b) => a - b);  // 정렬
+
     return answer;
 }
+
+
+// function solution(arr, divisor){
+//     let answer = arr.filter( x => x % divisor === 0);
+
+//     if(answer.length === 0 ){
+//         answer.push(-1);
+//     }   
+//     return answer.sort((a, b) => a - b);
+// }
+
 
 let a = [5, 9, 7, 10]
 let b = 5
@@ -68,4 +80,5 @@ let e = [1, 2, 3, 4]
 let f = 5
 
 console.log(solution(e, f))
+
 
