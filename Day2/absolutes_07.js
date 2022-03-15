@@ -28,18 +28,18 @@
 // signs가 [false,false,true] 이므로, 실제 수들의 값은 각각 -1, -2, 3입니다.
 // 따라서 세 수의 합인 0을 return 해야 합니다.
 
-// function solution(absolutes, signs){   // signs의 값이 true false에 따라 양수 음수
-//     let answer = 0;
+function solution(absolutes, signs){   // signs의 값이 true false에 따라 양수 음수
+    let answer = 0;
     
-//     for(let i=0; i < absolutes.length; i++){
-//         if(signs[i] === true){
-//             answer += absolutes[i]  // true라면 absolutes 배열의 i번째값을 더함
-//         } else{
-//             answer -= absolutes[i]  // false라면 absolutes 배열의 i번째값을 뺌
-//         }
-//     }
-//     return answer;
-// }
+    for(let i=0; i < absolutes.length; i++){
+        if(signs[i] === true){
+            answer += absolutes[i]  // true라면 absolutes 배열의 i번째값을 더함
+        } else{
+            answer -= absolutes[i]  // false라면 absolutes 배열의 i번째값을 뺌
+        }
+    }
+    return answer;
+}
 
 
 function solution(absolutes, signs){

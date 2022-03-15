@@ -19,7 +19,7 @@ function solution(x, n){
     let answer = [];
 
     for(let i = 1; i <= n; i++){  // i를 선언 후 1을 할당, n개만큼 출력할거니 n이하로 반복
-        answer.push(x*i); // 배열에 데이터값을 넣을때는 push를 사용함
+        answer.push(x*i);         // 배열에 데이터값을 넣을때는 push를 사용함
     }
     return answer;
 }

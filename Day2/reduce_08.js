@@ -13,16 +13,16 @@
 let a = [1, 2, 3, 4];
 let b = [5, 5]
 
-// function solution(arr){
-//     let answer = 0;
+function solution(arr){
+    let answer = 0;
 
-//     for(let i=0; i < arr.length; i++){
-//         answer += arr[i];
-//     }
-//     answer = answer/arr.length;
+    for(let i=0; i < arr.length; i++){
+        answer += arr[i];
+    }
+    answer = answer/arr.length;
 
-//     return answer;
-// }
+    return answer;
+}
 
 
 
@@ -31,3 +31,4 @@ function solution(arr){
 }
 
 console.log(solution(b));
+
