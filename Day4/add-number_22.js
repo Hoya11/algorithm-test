@@ -30,11 +30,11 @@
 
 function solution(n){
     let answer = 0;
-    let str = n +""                 // split을 하기 위해서 문자열로 변환 String(n) = n + "" 동일
-    let str_sp = str.split('');         // split으로 456을 '4','5','6' 으로 나눠줌
+    let str = n +""                                  // split을 하기 위해서 문자열로 변환 String(n) = n + "" 동일
+    let str_sp = str.split('');                      // split으로 456을 '4','5','6' 으로 나눠줌
 
     for(let i = 0; i<str_sp.length; i++){    
-        answer += parseInt(str_sp[i]);        // answer에 str_sp[i] 값을 정수로 반환해서 더해줌
+        answer += parseInt(str_sp[i]);               // answer에 str_sp[i] 값을 정수로 반환해서 더해줌
     }
     return answer
 }

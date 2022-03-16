@@ -28,13 +28,16 @@ function solution(n){
 
 
 
-
-
-//  ex 1)
+//   ex 1)
 
 // function solution(n) {
 //     return (n + '')         // 문자열 변환
 //     .split('')              // 하나씩 자르기
 //     .map(v => +v)           // 각 자리수를 문자열에서 숫자로 변환
 //     .reverse();             // reverse를 이용해 순서를 뒤집기
+// }
+
+
+// function solution(n){
+//   return (n + '').split('').map(v => +v).reverse();
 // }

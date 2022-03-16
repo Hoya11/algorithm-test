@@ -26,22 +26,28 @@
 
 
 
+// function solution(s){
+//     let p = 0, y = 0
+    
+//     s = s.toLowerCase();                // 문자를 소문자로 전부 변경
+    
+//     for(let i = 0; i < s.length; i++){  // 하나씩 비교
+//         if(s[i] === "p"){               // s[i]번째 글자가 p 이면
+//             p++;                        // p 하나 추가
+//         }    
+//         else if(s[i] === "y"){          // s[i]번째 글자가 y 이면
+//             y++;                        // y 하나 추가
+//         }
+//     }
+    
+//     return p === y ? true : false;      // p의 개수랑 y의 개수가 같으면 true / 아니면 false
+// }
+
 function solution(s){
-    let p = 0, y = 0
-    
-    s = s.toLowerCase();                // 문자를 소문자로 전부 변경
-    
-    for(let i = 0; i < s.length; i++){  // 하나씩 비교
-        if(s[i] === "p"){               // s[i]번째 글자가 p 이면
-            p++;                        // p 하나 추가
-        }    
-        else if(s[i] === "y"){          // s[i]번째 글자가 y 이면
-            y++;                        // y 하나 추가
-        }
-    }
-    
-    return p === y ? true : false;      // p의 개수랑 y의 개수가 같으면 true / 아니면 false
+    return s.toUpperCase().split("P").length === s.toUpperCase().split("Y").length;
 }
+
+
 
 console.log(solution("pyy"));
 console.log(solution("psPYy"));

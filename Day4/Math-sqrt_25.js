@@ -28,12 +28,13 @@
 function solution(n){
     let sqrt = Math.sqrt(n);  // Math.sqrt 함수는 
 
-    if(Number.isInteger(sqrt)) {
-        return Math.pow(sqrt + 1, 2);
+    if(Number.isInteger(sqrt)) {   // Number.isinteger 정수인지 판별해주는 함수 , sqrt가 정수인지 확인
+        return Math.pow(sqrt + 1, 2);  // (sqrt + 1) ** 2  이것도 동일한 식
     } else {
         return -1
     }
-    // return Number.isInteger(sqrt) ? Math.pow(sqrt +1, 2) : -1;
+
+    // return Number.isInteger(sqrt) ? Math.pow(sqrt +1, 2) : -1;   // 위에 if문을 한줄로 요약
 }
 
 console.log(solution(121));

@@ -41,47 +41,51 @@
 // 바람-비-물
 
 
-// function solution(s){
-//     let answer = [];
-//     let arr = s.split(' ');   //공백으로 자름
+function solution(s){
+    let answer = [];
+    let arr = s.split(' ');   //공백으로 자름
 
-//     for(let i = 0; i < arr.length; i++){
-//         let str = arr[i];
-//         for(let j = 0; j < str.length; j++){
-//             j % 2 == 0 ? answer.push(str[j].toUpperCase()) : answer.push(str[j].toLowerCase())
-//         }
-//         answer.push(' ');
-//     }
-//     answer.pop();
-//     return answer.join('');
-// }
+    for(let i = 0; i < arr.length; i++){
+        let str = arr[i];
+        for(let j = 0; j < str.length; j++){
+            j % 2 == 0 ? answer.push(str[j].toUpperCase()) : answer.push(str[j].toLowerCase())
+        }
+        answer.push(' ');
+    }
+    answer.pop();
+    return answer.join('');
+}
 
 // console.log(solution("try hello world"));
 
 
 
-function solution(s){
-    let answer=[];
-    let arr = s.split(' ');                 //공백으로 나눔 ("ab cd ef") => ("ab","cd","ef")
+// function solution(s){
+//     let answer=[];
+//     let arr = s.split(' ');                 //공백으로 나눔 ("ab cd ef") => ("ab","cd","ef")
 
-    for(let i = 0; i < arr.length; i++){  // 나누어놓은 ab, cd, ef를 돌림
-        let word = arr[i].split('')       // word에 ac cd ef를 "a","b","c" 이런식으로 나눔
-        .map((word, inx) =>{              
-            if(inx % 2 === 0) {           // word에서 나눠놓은 ["a","b"]를 2로 나눠봄
-                return word.toUpperCase()  // a는 0번째로 나머지가 없으니 대문자
-            } else {
-                return word.toLowerCase()  // b는 1번째로 나머지가 남으니 소문자
-            }
-        }).join('');                       // join으로 ["A","b"]를 ["Ab"]로 합침
+//     for(let i = 0; i < arr.length; i++){   // 나누어놓은 ab, cd, ef를 돌림
+//         let word = arr[i].split('')        // word에 ac cd ef를 "a","b","c" 이런식으로 나눔
+//         .map((word, inx) =>{              
+//             if(inx % 2 === 0) {            // word에서 나눠놓은 ["a","b"]를 2로 나눠봄
+//                 return word.toUpperCase()  // a는 0번째로 나머지가 없으니 대문자
+//             } else {
+//                 return word.toLowerCase()  // b는 1번째로 나머지가 남으니 소문자
+//             }
+//         }).join('');                       // join으로 ["A","b"]를 ["Ab"]로 합침
 
-        answer.push(word)                   // 합친 word를 answer에 푸쉬
-    }
-    return answer.join(' ');                // 위의 내용을 반복해서 받은 내용을
-                                            // join(' ')으로 공백을 넣어서 합침
-}
+//         answer.push(word)                   // 합친 word를 answer에 푸쉬
+//     }
+//     return answer.join(' ');                // 위의 내용을 반복해서 받은 내용을
+//                                             // join(' ')으로 공백을 넣어서 합침
+// }
 
 
-console.log(solution("try hello world"));
+// console.log(solution("try hello world"));
+
+
+
+
 
 
 // function solution(s){
