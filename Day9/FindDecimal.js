@@ -23,21 +23,21 @@
 // 1부터 5 사이의 소수는 [2,3,5] 3개가 존재하므로 3를 반환
 
 function solution(n) {
-  var arr = [];
-  var cnt = 0;
-  for (var i = 0; i < n + 1; i++) {
+  let arr = [];
+  let cnt = 0;
+  for (let i = 0; i < n + 1; i++) {
     arr.push(true);
   }
 
-  for (var i = 2; i * i <= n; i++) {
+  for (let i = 2; i * i <= n; i++) {
     if (arr[i]) {
-      for (var j = i * i; j <= n; j += i) {
+      for (let j = i * i; j <= n; j += i) {
         arr[j] = false;
       }
     }
   }
   arr.splice(0, 2, false, false);
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i]) cnt++;
   }
 
