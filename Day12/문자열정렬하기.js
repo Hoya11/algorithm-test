@@ -55,27 +55,43 @@ let a = ["sun", "bed", "car"];
 
 // console.log(solution(a, 1));
 
-//리팩토링
-function solution(strings, n) {
-  strings.sort((a, b) => {
-    let first = a[n];
-    let second = b[n];
+// //리팩토링
+// function solution(strings, n) {
+//   strings.sort((a, b) => {
+//     let first = a[n];
+//     let second = b[n];
 
-    if (first === second) {
-      return (a > b) - (b > a);
-    } else {
-      return (first > second) - (second > first);
-    }
-  });
-  return strings;
-}
+//     if (first === second) {
+//       return (a > b) - (b > a);
+//     } else {
+//       return (first > second) - (second > first);
+//     }
+//   });
+//   return strings;
+// }
 
-console.log(solution(a, 1));
+// console.log(solution(a, 1));
 
 //다른풀이
 // function solution(strings, n) {
 //     return strings.sort((s1, s2) => s1[n] === s2[n] ? s1.localeCompare(s2) : s1[n].localeCompare(s2[n]));
 // }
+
+function solution(strings, n) {
+  // 문자열의 n번째 글자를 기준으로 오름차순으로 정렬
+  strings.sort(function (a, b) {
+    if (a[n] !== b[n]) {
+      return a[n].localeCompare(b[n]);
+
+      // 단, 문자열의 n번째 글자가 같은 경우에는 전체 문자열을 기준으로 사전 순으로 정렬
+    } else {
+      return a.localeCompare(b);
+    }
+  });
+
+  return strings;
+}
+console.log(solution(a, 1));
 
 // localeCompare
 // 'a'.localeCompare('c');
@@ -86,3 +102,14 @@ console.log(solution(a, 1));
 
 // 'a'.localeCompare('a');
 // // 0, 동일하면 0을 리턴
+
+// function solution(strings, n) {
+//   let answer = strings;
+//   return answer.sort((a, b) => {
+//     let k = a.charCodeAt(n) - b.charCodeAt(n);
+//     console.log(k);
+//     return k == 0 ? a.localeCompare(b) : k;
+//   });
+// }
+
+// console.log(solution(a, 1));
