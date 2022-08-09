@@ -52,19 +52,25 @@
     public String[] solution(String[] movie) {
         String[] ans = {};
 
-        ArrayList<String> list = new ArrayList<>(Arrays.asList(movie));
-
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("A", "B", "C", "A", "B", "A"));
+        System.out.println("원본 : " + list); // [A, B, C, A, B, A]
+                 
+        // ArrayList 원소 빈도수 출력
         Set<String> set = new HashSet<String>(list);
-        for(String str : set){
-            Collections.frequency(list,str);
-            
-        }
-        Collections.sort(list);
-
-        
-        System.out.println(list);
+            for (String str : set) {
+                System.out.println(str + " : " + Collections.frequency(list, str));        
+            }
 
 
         return ans;
     }
 }
+
+
+
+List<String> asList = Arrays.asList(array);
+Set<String> set = new HashSet<String>(asList);
+Map<String, Integer> map = new HashMap<>();
+for (String str : set) 
+	map.put(str, Collections.frequency(asList, str));
+System.out.println(map);
