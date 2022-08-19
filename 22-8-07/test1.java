@@ -17,10 +17,9 @@
 			System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
 -----------------------------------
-        // Map.Entry 리스트 작성
+
 		List<Entry<String, Integer>> list_entries = new ArrayList<Entry<String, Integer>>(testMap.entrySet());
 
-		// 비교함수 Comparator를 사용하여 오름차순으로 정렬
 		Collections.sort(list_entries, new Comparator<Entry<String, Integer>>() {
 			// compare로 값을 비교
 			public int compare(Entry<String, Integer> obj1, Entry<String, Integer> obj2) {
